@@ -29,9 +29,6 @@ export default function AllTransactions() {
 const TransactionItem = ({ item }: { item: Transaction }) => {
     return (
         <div className={`border-secondary border-bottom row py-1`}>
-            {/* id */}
-            <div className='col-2'>{item.id}</div>
-
             {/* title */}
             <div className='col-6'>{item.description}</div>
 
