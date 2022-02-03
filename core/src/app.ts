@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/transaction', transactionRoutes);
+app.use('/api/transactions', transactionRoutes);
 
 let PORT = '5000';
 try {

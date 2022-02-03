@@ -1,8 +1,12 @@
 import express from 'express';
-import addTrnasaction from '../controls/transaction.controller';
+import {
+    addTrnasaction,
+    getTransactions,
+} from '../controls/transaction.controller';
 
 const router = express.Router();
 
 router.post('/', addTrnasaction);
+router.get('/', getTransactions);
 
 export default router;
