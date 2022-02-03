@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ButtonTransaction from './components/ButtonTransaction';
 import ReportItem from './components/ReportItem';
-import TransactionItem from './components/TransactionItem';
+import TransactionItem from './components/AllTransactions';
 
 export interface MonthType {
     amount: {

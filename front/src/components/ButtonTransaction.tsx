@@ -41,7 +41,7 @@ export default function ButtonTransaction() {
                 ariaHideApp={false}
                 contentLabel='Add a new transaction'
             >
-                <AddTransaction />
+                <AddTransaction onClose={closeModal} />
             </Modal>
         </>
     );

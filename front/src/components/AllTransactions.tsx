@@ -3,15 +3,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Transaction, TransactionState, TransactionType } from '../state';
 import { getTrnasactions } from '../state/actions/transactionActions';
 
-export default function Transactions() {
+export default function AllTransactions() {
     let dispatch = useDispatch();
     let { transactions, loading, error } = useSelector(
         (state) => state.transaction as TransactionState,
     );
+    console.log(transactions);
 
     useEffect(() => {
         dispatch(getTrnasactions());
     }, []);
+
+    if (loading) {
+        return <h1>Loading...</h1>;
+    }
 
     return transactions.map((t: Transaction, idx: number) => (
         <TransactionItem key={idx} item={t} />
