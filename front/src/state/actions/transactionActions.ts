@@ -22,8 +22,8 @@ export const getTrnasactions =
             let { data }: { data: TransactionState[] } = await axios.get(
                 'http://localhost:5000/api/transactions',
             );
-            console.log(data);
-            // dispatch({ type: 'SUCCESS', payload: data });
+
+            dispatch({ type: 'SUCCESS', payload: data.data });
         } catch (e: any) {
             dispatch({ type: 'FAILURE', payload: { error: e.message } });
         }

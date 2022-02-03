@@ -6,13 +6,13 @@ export default function transactionReducer(
 ) {
     switch (action.type) {
         case 'REQUEST': {
-            return { ...state, loading: true };
+            return { loading: true, transactions: [] };
         }
         case 'SUCCESS': {
-            return { ...state, loading: false, transactions: action.payload };
+            return { loading: false, transactions: action.payload };
         }
         case 'FAILURE': {
-            return { ...state, loading: false, error: action.payload };
+            return { loading: false, error: action.payload };
         }
         default:
             return state;

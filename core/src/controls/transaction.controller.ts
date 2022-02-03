@@ -41,12 +41,12 @@ export function addTrnasaction(req: Request, res: Response) {
 
 export function getTransactions(req: Request, res: Response) {
     client
-        .query(`SELECT (id, amount, description, type) FROM transactions;`)
+        .query(`SELECT * FROM transactions;`)
         .then((result) => {
             res.status(200).json({
                 message: 'new transaction added.',
-                status: result.rowCount,
-                data: result,
+                count: result.rowCount,
+                data: result.rows,
             });
         })
         .catch((err) => {
