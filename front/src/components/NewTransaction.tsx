@@ -13,7 +13,7 @@ const customStyles = {
     },
 };
 
-export default function ButtonTransaction() {
+export default function NewTransaction() {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal() {

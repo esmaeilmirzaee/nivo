@@ -8,7 +8,6 @@ export default function AllTransactions() {
     let { transactions, loading, error } = useSelector(
         (state) => state.transaction as TransactionState,
     );
-    console.log(transactions);
 
     useEffect(() => {
         dispatch(getTrnasactions());
@@ -18,9 +17,13 @@ export default function AllTransactions() {
         return <h1>Loading...</h1>;
     }
 
-    return transactions.map((t: Transaction, idx: number) => (
-        <TransactionItem key={idx} item={t} />
-    ));
+    return (
+        <>
+            {transactions.map((t: Transaction, idx: number) => (
+                <TransactionItem key={idx} item={t} />
+            ))}
+        </>
+    );
 }
 
 const TransactionItem = ({ item }: { item: Transaction }) => {

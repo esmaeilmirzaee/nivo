@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ButtonTransaction from './components/ButtonTransaction';
+import NewTransaction from './components/NewTransaction';
 import ReportItem from './components/ReportItem';
-import TransactionItem from './components/AllTransactions';
+import AllTransactions from './components/AllTransactions';
 
 export interface MonthType {
     amount: {
@@ -59,32 +59,11 @@ function App() {
                 </div>
 
                 <div className='d-grid my-2'>
-                    <ButtonTransaction />
+                    <NewTransaction />
                 </div>
 
                 <div className='container my-2'>
-                    {[
-                        {
-                            id: 1,
-                            description: 'یک متن فرضی',
-                            amount: 1000,
-                            type: 'deposit',
-                        },
-                        {
-                            id: 2,
-                            description: 'یک متن فرضی',
-                            amount: 1000,
-                            type: 'withdraw',
-                        },
-                        {
-                            id: 3,
-                            description: 'یک متن فرضی',
-                            amount: 1000,
-                            type: 'withdraw',
-                        },
-                    ].map((item, idx) => (
-                        <TransactionItem key={idx} item={item} />
-                    ))}
+                    <AllTransactions />
                 </div>
             </div>
         </div>
