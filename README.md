@@ -1,8 +1,10 @@
 ### SQL
 
+```sql
 CREATE DATABASE nivo;
 DROP TABLE transactions;
 CREATE TABLE transactions(userId TEXT, amount float, description TEXT, id TEXT, type boolean);
+```
 
 ### Core
 
