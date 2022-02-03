@@ -10,8 +10,6 @@ export default function AddTransaction({ onClose }) {
         type: '1',
     });
 
-    console.log(values);
-
     const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
         onClose();

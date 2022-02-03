@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import NewTransaction from './components/NewTransaction';
-import ReportItem from './components/ReportItem';
 import AllTransactions from './components/AllTransactions';
+import Reports from './components/Reports';
 
 export interface MonthType {
     amount: {
@@ -44,18 +44,9 @@ function App() {
                         </div>
                     ))}
                 </div>
-                <div className='container m-1 border-bottom border-warning border-2'>
-                    <div className='row'>
-                        {[
-                            { type: 'deposit', amount: 333333 },
-                            {
-                                type: 'withdraw',
-                                amount: 22222222,
-                            },
-                        ].map((item: MonthType, idx: number) => (
-                            <ReportItem key={idx} item={item} />
-                        ))}
-                    </div>
+
+                <div>
+                    <Reports />
                 </div>
 
                 <div className='d-grid my-2'>
