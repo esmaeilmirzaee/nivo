@@ -28,13 +28,10 @@ function App() {
             <h1>خوش آمدید</h1>
             <div className='container border' style={{ width: '20rem' }}>
                 <div className='border-bottom px-4 pt-4 pb-2 border-danger row'>
-                    {/* <h3>اضافه کردن</h3> */}
                     {/* tab months */}
-
-                    {['قبل', 'جاری', 'آتی'].map((m, idx) => (
-                        <div className='container col'>
+                    {['جاری'].map((m, idx) => (
+                        <div className='d-grid col' key={idx}>
                             <button
-                                key={idx}
                                 className={`${
                                     m === 'جاری' ? 'active' : ''
                                 } btn btn-outline-light text-black`}

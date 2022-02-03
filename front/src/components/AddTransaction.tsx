@@ -17,7 +17,7 @@ export default function AddTransaction({ onClose }) {
             addTrnasaction({
                 ...values,
                 id: 12,
-                type: values.type === '1' ? 'DEPOSIT' : 'WITHDRAW',
+                type: values.type === '2' ? 'deposit' : 'withdraw',
             }),
         );
     };
